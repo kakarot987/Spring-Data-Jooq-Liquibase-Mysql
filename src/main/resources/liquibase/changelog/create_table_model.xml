@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="0" author="MAYANK">
+        <createTable tableName="model">
+            <column name="model_id" type="INT">
+                <constraints primaryKey="true" unique="true"/>
+            </column>
+            <column name="model_name" type="varchar(20)">
+                <constraints unique="false" nullable="false"/>
+            </column>
+            <column name="model_instaURL" type="varchar(20)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="model_gender" type="varchar(20)">
+                <constraints unique="false"/>
+            </column>
+            <column name="model_born" type="varchar(20)">
+                <constraints unique="false"/>
+            </column>
+            <column name="model_nationality" type="varchar(20)">
+                <constraints unique="false"/>
+            </column>
+            <column name="model_height" type="varchar(20)">
+                <constraints unique="true"/>
+            </column>
+            <column name="model_figure" type="varchar(20)">
+                <constraints nullable="true" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

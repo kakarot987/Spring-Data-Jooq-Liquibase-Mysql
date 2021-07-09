@@ -14,8 +14,8 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.springBoot-liquibase-jooq'
 version = '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.9
+targetCompatibility = 1.9
 
 repositories {
 	mavenLocal()
@@ -61,9 +61,9 @@ jooq {
 			generationTool {
 				jdbc {
 					driver = 'com.mysql.cj.jdbc.Driver'
-					url = 'jdbc:mysql://127.0.0.1:3306/demo'
+					url = 'jdbc:mysql://127.0.0.1:3306/world'
 					user = 'root'
-					password = 'root123'
+					password = 'root1234'
 				}
 
 				generator {
@@ -71,7 +71,7 @@ jooq {
 
 					database {
 						name = 'org.jooq.meta.mysql.MySQLDatabase'
-						inputSchema = 'demo'
+						inputSchema = 'world'
 						outputSchemaToDefault = true
 						excludes = 'DATABASECHANGELOG|DATABASECHANGELOGLOCK'
 						forcedTypes {
@@ -95,7 +95,7 @@ jooq {
 					}
 
 					target {
-						packageName = 'co.tide.timeline.db.jooq'
+						packageName = 'co.db.jooq'
 						directory = 'src/generated-db-entities/java/'
 					}
 				}

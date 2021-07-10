@@ -12,6 +12,9 @@
             <column name="model_instaURL" type="varchar(20)">
                 <constraints unique="true" nullable="false"/>
             </column>
+            <column name="model_dpURL" type="varchar(50)">
+                <constraints unique="true" nullable="false"/>
+            </column>
             <column name="model_gender" type="varchar(20)">
                 <constraints unique="false"/>
             </column>

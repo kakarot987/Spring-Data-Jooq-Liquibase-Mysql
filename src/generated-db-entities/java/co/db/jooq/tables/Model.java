@@ -15,7 +15,7 @@ import org.jooq.Field;
 import org.jooq.ForeignKey;
 import org.jooq.Name;
 import org.jooq.Record;
-import org.jooq.Row8;
+import org.jooq.Row9;
 import org.jooq.Schema;
 import org.jooq.Table;
 import org.jooq.TableField;
@@ -61,6 +61,11 @@ public class Model extends TableImpl<ModelRecord> {
      * The column <code>model.model_instaURL</code>.
      */
     public final TableField<ModelRecord, String> MODEL_INSTAURL = createField(DSL.name("model_instaURL"), SQLDataType.VARCHAR(20).nullable(false), this, "");
+
+    /**
+     * The column <code>model.model_dpURL</code>.
+     */
+    public final TableField<ModelRecord, String> MODEL_DPURL = createField(DSL.name("model_dpURL"), SQLDataType.VARCHAR(50).nullable(false), this, "");
 
     /**
      * The column <code>model.model_gender</code>.
@@ -132,7 +137,7 @@ public class Model extends TableImpl<ModelRecord> {
 
     @Override
     public List<UniqueKey<ModelRecord>> getKeys() {
-        return Arrays.<UniqueKey<ModelRecord>>asList(Keys.KEY_MODEL_PRIMARY, Keys.KEY_MODEL_MODEL_ID, Keys.KEY_MODEL_MODEL_INSTAURL, Keys.KEY_MODEL_MODEL_HEIGHT);
+        return Arrays.<UniqueKey<ModelRecord>>asList(Keys.KEY_MODEL_PRIMARY, Keys.KEY_MODEL_MODEL_ID, Keys.KEY_MODEL_MODEL_INSTAURL, Keys.KEY_MODEL_MODEL_DPURL, Keys.KEY_MODEL_MODEL_HEIGHT);
     }
 
     @Override
@@ -162,11 +167,11 @@ public class Model extends TableImpl<ModelRecord> {
     }
 
     // -------------------------------------------------------------------------
-    // Row8 type methods
+    // Row9 type methods
     // -------------------------------------------------------------------------
 
     @Override
-    public Row8<Integer, String, String, String, String, String, String, String> fieldsRow() {
-        return (Row8) super.fieldsRow();
+    public Row9<Integer, String, String, String, String, String, String, String, String> fieldsRow() {
+        return (Row9) super.fieldsRow();
     }
 }

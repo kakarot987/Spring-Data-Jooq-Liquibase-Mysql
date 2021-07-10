@@ -16,7 +16,11 @@ ext {
             mysql                   : "mysql:mysql-connector-java:${mySqlVersion}",
             jooq                    : "org.jooq:jooq:${jooqVersion}",
 
+            //jsp dependencies
+            jstl : "javax.servlet:jstl",
+            jasper : "org.apache.tomcat.embed:tomcat-embed-jasper",
+
             // Test dependencies
-            springBootStarterTest : "org.springframework.boot:spring-boot-starter-test",
+            springBootStarterTest : "org.springframework.boot:spring-boot-starter-test"
     ]
 }

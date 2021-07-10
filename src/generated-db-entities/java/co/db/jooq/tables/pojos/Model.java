@@ -18,6 +18,7 @@ public class Model implements Serializable {
     private Integer modelId;
     private String  modelName;
     private String  modelInstaurl;
+    private String  modelDpurl;
     private String  modelGender;
     private String  modelBorn;
     private String  modelNationality;
@@ -30,6 +31,7 @@ public class Model implements Serializable {
         this.modelId = value.modelId;
         this.modelName = value.modelName;
         this.modelInstaurl = value.modelInstaurl;
+        this.modelDpurl = value.modelDpurl;
         this.modelGender = value.modelGender;
         this.modelBorn = value.modelBorn;
         this.modelNationality = value.modelNationality;
@@ -41,6 +43,7 @@ public class Model implements Serializable {
         Integer modelId,
         String  modelName,
         String  modelInstaurl,
+        String  modelDpurl,
         String  modelGender,
         String  modelBorn,
         String  modelNationality,
@@ -50,6 +53,7 @@ public class Model implements Serializable {
         this.modelId = modelId;
         this.modelName = modelName;
         this.modelInstaurl = modelInstaurl;
+        this.modelDpurl = modelDpurl;
         this.modelGender = modelGender;
         this.modelBorn = modelBorn;
         this.modelNationality = modelNationality;
@@ -99,6 +103,21 @@ public class Model implements Serializable {
      */
     public Model setModelInstaurl(String modelInstaurl) {
         this.modelInstaurl = modelInstaurl;
+        return this;
+    }
+
+    /**
+     * Getter for <code>model.model_dpURL</code>.
+     */
+    public String getModelDpurl() {
+        return this.modelDpurl;
+    }
+
+    /**
+     * Setter for <code>model.model_dpURL</code>.
+     */
+    public Model setModelDpurl(String modelDpurl) {
+        this.modelDpurl = modelDpurl;
         return this;
     }
 
@@ -204,6 +223,12 @@ public class Model implements Serializable {
         }
         else if (!modelInstaurl.equals(other.modelInstaurl))
             return false;
+        if (modelDpurl == null) {
+            if (other.modelDpurl != null)
+                return false;
+        }
+        else if (!modelDpurl.equals(other.modelDpurl))
+            return false;
         if (modelGender == null) {
             if (other.modelGender != null)
                 return false;
@@ -244,6 +269,7 @@ public class Model implements Serializable {
         result = prime * result + ((this.modelId == null) ? 0 : this.modelId.hashCode());
         result = prime * result + ((this.modelName == null) ? 0 : this.modelName.hashCode());
         result = prime * result + ((this.modelInstaurl == null) ? 0 : this.modelInstaurl.hashCode());
+        result = prime * result + ((this.modelDpurl == null) ? 0 : this.modelDpurl.hashCode());
         result = prime * result + ((this.modelGender == null) ? 0 : this.modelGender.hashCode());
         result = prime * result + ((this.modelBorn == null) ? 0 : this.modelBorn.hashCode());
         result = prime * result + ((this.modelNationality == null) ? 0 : this.modelNationality.hashCode());
@@ -259,6 +285,7 @@ public class Model implements Serializable {
         sb.append(modelId);
         sb.append(", ").append(modelName);
         sb.append(", ").append(modelInstaurl);
+        sb.append(", ").append(modelDpurl);
         sb.append(", ").append(modelGender);
         sb.append(", ").append(modelBorn);
         sb.append(", ").append(modelNationality);

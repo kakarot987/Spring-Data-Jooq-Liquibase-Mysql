@@ -47,6 +47,9 @@ dependencies {
 	implementation(libraries.jooq)
 	runtimeOnly(libraries.mysql)
 
+	//jsp dependencies
+	implementation(libraries.jstl)
+	implementation(libraries.jasper)
 	// Test
 	testImplementation(libraries.springBootStarterTest)
 }

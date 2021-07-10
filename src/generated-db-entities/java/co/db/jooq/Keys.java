@@ -24,6 +24,7 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<ModelRecord> KEY_MODEL_MODEL_DPURL = Internal.createUniqueKey(Model.MODEL, DSL.name("KEY_model_model_dpURL"), new TableField[] { Model.MODEL.MODEL_DPURL }, true);
     public static final UniqueKey<ModelRecord> KEY_MODEL_MODEL_HEIGHT = Internal.createUniqueKey(Model.MODEL, DSL.name("KEY_model_model_height"), new TableField[] { Model.MODEL.MODEL_HEIGHT }, true);
     public static final UniqueKey<ModelRecord> KEY_MODEL_MODEL_ID = Internal.createUniqueKey(Model.MODEL, DSL.name("KEY_model_model_id"), new TableField[] { Model.MODEL.MODEL_ID }, true);
     public static final UniqueKey<ModelRecord> KEY_MODEL_MODEL_INSTAURL = Internal.createUniqueKey(Model.MODEL, DSL.name("KEY_model_model_instaURL"), new TableField[] { Model.MODEL.MODEL_INSTAURL }, true);

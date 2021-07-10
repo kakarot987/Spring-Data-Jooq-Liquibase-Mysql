@@ -99,6 +99,27 @@ public class ModelDao extends DAOImpl<ModelRecord, co.db.jooq.tables.pojos.Model
     }
 
     /**
+     * Fetch records that have <code>model_dpURL BETWEEN lowerInclusive AND upperInclusive</code>
+     */
+    public List<co.db.jooq.tables.pojos.Model> fetchRangeOfModelDpurl(String lowerInclusive, String upperInclusive) {
+        return fetchRange(Model.MODEL.MODEL_DPURL, lowerInclusive, upperInclusive);
+    }
+
+    /**
+     * Fetch records that have <code>model_dpURL IN (values)</code>
+     */
+    public List<co.db.jooq.tables.pojos.Model> fetchByModelDpurl(String... values) {
+        return fetch(Model.MODEL.MODEL_DPURL, values);
+    }
+
+    /**
+     * Fetch a unique record that has <code>model_dpURL = value</code>
+     */
+    public co.db.jooq.tables.pojos.Model fetchOneByModelDpurl(String value) {
+        return fetchOne(Model.MODEL.MODEL_DPURL, value);
+    }
+
+    /**
      * Fetch records that have <code>model_gender BETWEEN lowerInclusive AND upperInclusive</code>
      */
     public List<co.db.jooq.tables.pojos.Model> fetchRangeOfModelGender(String lowerInclusive, String upperInclusive) {

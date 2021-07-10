@@ -7,12 +7,12 @@
             <column name="model_id" value="1" />
             <column name="model_name" value="may" />
             <column name="model_instaURL" value="dsadsa.com" />
+            <column name="model_dpURL" value="dsadsa.com" />
             <column name="model_gender" value="male" />
             <column name="model_born" value="1198" />
             <column name="model_nationality" value="IND" />
             <column name="model_height" value="6" />
             <column name="model_figure" value="121221" />
-
         </insert>
     </changeSet>
 </databaseChangeLog>

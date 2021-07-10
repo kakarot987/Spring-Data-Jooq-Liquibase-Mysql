@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.springBootliquibasejooq.ModelRepository;
 import com.springBootliquibasejooq.service.ModelService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @JsonIgnoreProperties(value = {"handler","hibernateLazyInitializer","fieldHandler"})
-@RestController
+@Controller
 public class ModelController {
 
     @Autowired
@@ -26,7 +27,7 @@ public class ModelController {
 
     @RequestMapping("/addModel")
     public String addModel(@RequestBody Model model){
-        return modelService.addModel(model.getModelId(),model.getModelName(),model.getModelInstaurl(),model.getModelGender(),model.getModelBorn(),model.getModelNationality(),model.getModelHeight(),model.getModelFigure());
+        return modelService.addModel(model.getModelId(),model.getModelName(),model.getModelInstaurl(),model.getModelDpurl(),model.getModelGender(),model.getModelBorn(),model.getModelNationality(),model.getModelHeight(),model.getModelFigure());
     }
 
     @RequestMapping ("getModels")

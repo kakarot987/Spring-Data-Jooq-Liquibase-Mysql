@@ -1,12 +1,10 @@
 package com.springBootliquibasejooq;
 
 import co.db.jooq.tables.Model;
-import co.db.jooq.tables.records.ModelRecord;
 import org.jooq.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public class ModelRepository {

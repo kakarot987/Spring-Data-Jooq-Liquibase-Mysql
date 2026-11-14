@@ -14,8 +14,8 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.springBoot-liquibase-jooq'
 version = '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.9
-targetCompatibility = 1.9
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
 	mavenLocal()
@@ -64,9 +64,9 @@ jooq {
 			generationTool {
 				jdbc {
 					driver = 'com.mysql.cj.jdbc.Driver'
-					url = 'jdbc:mysql://127.0.0.1:3306/world'
-					user = 'root'
-					password = 'root1234'
+					url = System.getenv('DB_URL') ?: 'jdbc:mysql://127.0.0.1:3306/world'
+					user = System.getenv('DB_USER') ?: 'app'
+					password = System.getenv('DB_PASSWORD') ?: ''
 				}
 
 				generator {
